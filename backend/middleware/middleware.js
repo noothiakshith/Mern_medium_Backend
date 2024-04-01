@@ -28,3 +28,5 @@ const jwtauth = async(req,res,next)=>{
         return res.status(401).send({message:'Unauthorized'});
     }
 }
+
+module.exports= jwtauth;
