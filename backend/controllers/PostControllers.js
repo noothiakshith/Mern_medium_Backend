@@ -101,7 +101,7 @@ const isloggedin = ()=>{
         return false;
     }
     try{
-        const verified = jwt.verify(token,process.env.SECRET);
+        const verified = jwt.verify(token,process.env.Jwt_Secret);
         return true;
     }
     catch(err){

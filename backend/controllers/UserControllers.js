@@ -53,7 +53,7 @@ const signin = async(req,res)=>{
 }
 
 const newtokengeneration = async()=>{
-    const token = jwt.sign({_id:User._id},process.env.TOKEN_SECRET);
+    const token = jwt.sign({_id:User._id},process.env.Jwt_Secret,{expiresIn:'1h'});
     return token;
 }
 
