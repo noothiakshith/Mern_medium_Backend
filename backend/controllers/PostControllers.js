@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const postvalidation = require('../zod/Validation');
 const Post = require('../models/Post');
-create,update,read,readall
+
 const create = async(req,res)=>{
     generateid();
     try{
@@ -113,3 +113,5 @@ const generateid = ()=>{
     const id = Math.floor(Math.random()*100000);
     return id;
 }
+
+module.exports={create,update,read,readall,isloggedin,generateid}
